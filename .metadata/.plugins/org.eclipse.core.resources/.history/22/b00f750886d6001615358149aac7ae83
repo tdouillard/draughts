@@ -1,0 +1,4 @@
+
+public enum  PawnColour {
+	BLACK, WHITE
+}

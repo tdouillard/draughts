@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="draught-core" project="draught-core" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="DraughtsGameTest" time="0.0">
+    <testcase name="doesGameExist" classname="DraughtsGameTest" time="0.0"/>
+    <testcase name="canPawnBecomeQueen" classname="DraughtsGameTest" time="0.0"/>
+    <testcase name="canPawnBeEaten" classname="DraughtsGameTest" time="0.0"/>
+    <testcase name="canPawnMove" classname="DraughtsGameTest" time="0.0"/>
+  </testsuite>
+</testrun>

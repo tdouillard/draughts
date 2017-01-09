@@ -1,0 +1,104 @@
+2017-01-09 16:47:22,050 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:47:22,051 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 16:47:22,051 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:47:22,052 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 16:50:04,940 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:50:04,941 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 16:50:04,941 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:50:04,941 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 16:54:00,712 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:54:00,712 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 16:54:00,713 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:54:00,713 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 16:54:20,729 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:54:20,729 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 16:54:20,730 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:54:20,730 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 16:54:23,041 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:54:23,041 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 16:54:23,042 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:54:23,042 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 16:56:02,571 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:56:02,572 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 16:56:02,572 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:56:02,572 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 16:56:23,136 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:56:23,136 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 16:56:23,137 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 16:56:23,137 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:05:02,101 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:05:02,101 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:05:02,102 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:05:02,102 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:05:57,959 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:05:57,959 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:05:57,960 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:05:57,960 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:06:02,452 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:06:02,452 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:06:02,453 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:06:02,453 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:06:05,225 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:06:05,225 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:06:05,226 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:06:05,226 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:06:25,425 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:06:25,426 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:06:25,426 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:06:25,426 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:06:32,827 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:06:32,827 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:06:32,828 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:06:32,828 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:07:13,023 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:07:13,023 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:07:13,024 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:07:13,024 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:07:20,907 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:07:20,907 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:07:20,908 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:07:20,908 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:07:34,537 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:07:34,537 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:07:34,537 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:07:34,537 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:08:03,083 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:08:03,083 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:08:03,084 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:08:03,084 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:08:27,342 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:08:27,342 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:08:27,343 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:08:27,343 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:08:34,865 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:08:34,865 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:08:34,866 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:08:34,866 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:08:50,547 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:08:50,547 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:08:50,547 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:08:50,547 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:09:02,806 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:09:02,806 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:09:02,806 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:09:02,806 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:09:33,584 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:09:33,585 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:09:33,586 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:09:33,586 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:09:43,978 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:09:43,979 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:09:43,980 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:09:43,980 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:09:54,075 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:09:54,076 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:09:54,077 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:09:54,077 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:10:07,908 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:10:07,909 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:10:07,909 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:10:07,909 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
+2017-01-09 17:10:16,433 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:10:16,433 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/main/resources
+2017-01-09 17:10:16,433 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-09 17:10:16,433 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/douille/Isen/JEE/draughts/draught-core/src/test/resources
