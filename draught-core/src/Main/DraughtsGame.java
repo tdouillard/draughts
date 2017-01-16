@@ -9,4 +9,12 @@ public class DraughtsGame {
 	 	
 	 	}
 
+	public void play (PawnColour colour, int posX , int posY){
+
+	}
+
+	public void getCell(int posX , int posY){
+
+	}
+
 }

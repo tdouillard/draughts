@@ -21,5 +21,6 @@ public class DraughtsGameImpl extends DraughtsGame {
 			board.add(new ArrayList<PawnColour>(MAX_ROWS));
 		}
 	}
-		
+
+
 }
