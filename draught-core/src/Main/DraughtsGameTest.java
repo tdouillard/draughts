@@ -2,6 +2,7 @@ package Main;
 
 import static Main.PawnColour.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.testng.annotations.Test;
@@ -23,7 +24,7 @@ public class DraughtsGameTest {
 	}
 
 	@Test
-	public void canPawnMove(){
+	public void canPawnMove() throws Exception{
 		game.play(WHITE, 3 ,3);
 		assertThat(game.getCell(3, 3)).isEqualTo(WHITE);
 		try {
@@ -35,9 +36,20 @@ public class DraughtsGameTest {
 
 	}
 
+	@Test
+	public void canItWin() throws Exception{
+		assertThat(game.numberBlack).isEqualTo(0);
+		try {
+			game.whoWon(game.numberBlack);
+		} catch (GameException e) {
+
+		}
+
+	}
+
 
 	@Test
-	public void canPawnBeEaten(){
+	public void canPawnBeEaten() throws Exception{
 		game.play(WHITE, 3 ,3);
 		game.play(BLACK, 4 ,4);
 
@@ -51,7 +63,7 @@ public class DraughtsGameTest {
 	}
 
 	@Test
-	public void canPawnBecomeQueen(){
+	public void canPawnBecomeQueen()throws Exception{
 		game.play(WHITE, 3 , 9);
 		assertThat(game.getCell(3,10)).isEqualTo(null);
 
@@ -64,7 +76,7 @@ public class DraughtsGameTest {
 	}
 
 	@Test
-	public void ItCantPlayOutside(){
+	public void ItCantPlayOutside() throws Exception{
 		try {
 			game.play(WHITE, 12 , 10);
 			fail("It should not be possible to play outside of the board");
@@ -72,4 +84,6 @@ public class DraughtsGameTest {
 
 		}
 	}
+
+
 }
