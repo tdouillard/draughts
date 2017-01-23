@@ -3,37 +3,21 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DraughtsGame {
+public abstract class DraughtsGame {
 
-	public int numberBlack;
-	public int numberWhite;
-
+	public static final int PAWN_NUMBER = 40;
+	public int blackPawnNumber;
+	public int whitePawnNumber;
+	
 	public DraughtsGame(){
-	 	
+		
 	}
 
-	public void play (PawnColour colour, int posX , int posY){
-
-	}
-
-
-	public void getCell(int posX , int posY){
-
-	}
-
-	public PawnColour whoWon(int numberPawn){
-		if(numberBlack == 0){
-			return PawnColour.WHITE;
-		} else if(numberWhite == 0){
-			return PawnColour.BLACK;
-		} else{
-			return null;
-		}
-
-	}
-
-	public void becomeQueen(Pawn pawn){
-		pawn.status = PawnStatus.QUEEN;
-	}
+	public abstract boolean play(int startColIndex, int startRowIndex, int endColIndex, int endRowIndex); 
+	
+	public abstract Object getCell(int posX , int posY);
+	
+	public abstract PawnColour getWinner(int numberPawn);
+	
 
 }

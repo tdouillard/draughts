@@ -1,90 +1,48 @@
 package Main;
 
-import static Main.PawnColour.*;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.fail;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertThat;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.testng.annotations.Test;
-
-
+import org.junit.Before;
+import org.junit.Test;
 
 public class DraughtsGameTest {
-	private DraughtsGame game;
+	private DraughtsGameImpl game;
 	
-	@BeforeAll
+	@Before
 	public void doBefore() throws Exception {
         game = new DraughtsGameImpl();
     }
 	
 	@Test
-	public void  doesGameExist() throws Exception{
-		System.out.println(game.getClass().getPackage());
+	/**
+	 * todo:match board game with a complete board game to check pawn position 
+	 * @throws Exception
+	 */
+	public void isGameInitialized() throws Exception{
 		assertFalse(game.equals(null));
+		System.out.println(game.board.size());
+		assertTrue(game.getBoardPawnNumber(null) == DraughtsGame.PAWN_NUMBER);
+		assertTrue(game.getBlackPawnNumber() == 20);
+		assertTrue(game.getWhitePawnNumber() == 20);
 	}
-
 	@Test
-	public void canPawnMove() throws Exception{
-		game.play(WHITE, 3 ,3);
-		assertThat(game.getCell(3, 3)).isEqualTo(WHITE);
-		try {
-			game.play(WHITE, 3 , 4);
-		} catch (GameException e) {
-
-		}
-
-
+	/**
+	 * 
+	 */
+	public void canPawnMove(){
+//		assertFalse(game.movePawn(0,4,0,5));	
+//		assertFalse(game.movePawn(0,4,-1,5));
+//		assertTrue(game.movePawn(0,4,1,5));
 	}
-
 	@Test
-	public void canItWin() throws Exception{
-		assertThat(game.numberBlack).isEqualTo(0);
-		try {
-			game.whoWon(game.numberBlack);
-		} catch (GameException e) {
-
-		}
-
+	public void canPawnBeEaten(){
+		
 	}
-
-
 	@Test
-	public void canPawnBeEaten() throws Exception{
-		game.play(WHITE, 3 ,3);
-		game.play(BLACK, 4 ,4);
-
-		assertThat(game.getCell(5, 5)).isEqualTo(null);
-		try {
-			game.play(WHITE, 5 , 5);
-		} catch (GameException e) {
-
-		}
-
+	public void canPawnBecomeQueen(){
+		
 	}
-
-	@Test
-	public void canPawnBecomeQueen()throws Exception{
-		game.play(WHITE, 3 , 9);
-		assertThat(game.getCell(3,10)).isEqualTo(null);
-
-		try {
-			game.play(WHITE, 3 , 10);
-		} catch (GameException e) {
-
-		}
-
-	}
-
-	@Test
-	public void ItCantPlayOutside() throws Exception{
-		try {
-			game.play(WHITE, 12 , 10);
-			fail("It should not be possible to play outside of the board");
-		} catch (GameException e) {
-
-		}
-	}
-
-
 }
