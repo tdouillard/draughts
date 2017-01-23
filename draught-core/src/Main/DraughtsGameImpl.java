@@ -23,4 +23,5 @@ public class DraughtsGameImpl extends DraughtsGame {
 	}
 
 
+
 }
