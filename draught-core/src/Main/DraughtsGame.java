@@ -26,8 +26,14 @@ public class DraughtsGame {
 			return PawnColour.WHITE;
 		} else if(numberWhite == 0){
 			return PawnColour.BLACK;
+		} else{
+			return null;
 		}
-		return null;
+
+	}
+
+	public void becomeQueen(Pawn pawn){
+		pawn.status = PawnStatus.QUEEN;
 	}
 
 }
