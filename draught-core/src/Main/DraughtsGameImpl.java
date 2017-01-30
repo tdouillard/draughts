@@ -1,16 +1,25 @@
 package Main;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
+import java.lang.Math;
 
 public class DraughtsGameImpl extends DraughtsGame {
 	public static final int MAX_COLS = 10;
 	public static final int MAX_ROWS = 10;
-	ArrayList<ArrayList<PawnColour>> board = new ArrayList<>(MAX_COLS);
+	public static final int MIN_PAWNS = 0;
+	ArrayList<ArrayList<Pawn>> board = new ArrayList<>(MAX_COLS);
 
 	public DraughtsGameImpl() {
-		this.blackPawnNumber = 0;
-		this.whitePawnNumber = 0;
+		this.pawnNumbersByColor = new HashMap<PawnColour, Integer>();
+		for (PawnColour colour : PawnColour.values()) {
+			pawnNumbersByColor.put(colour, MIN_PAWNS);
+		}
 		initGame();
 	}
 
@@ -19,7 +28,7 @@ public class DraughtsGameImpl extends DraughtsGame {
 	 */
 	public void initGame() {
 		for (int index = 0; index <= MAX_COLS - 1; index++) {
-			board.add(coloredArray(index));
+			board.add(createRowArray(index));
 		}
 	}
 
@@ -32,8 +41,8 @@ public class DraughtsGameImpl extends DraughtsGame {
 	 * 
 	 * @param colIndex
 	 */
-	public ArrayList<PawnColour> coloredArray(int colIndex) {
-		ArrayList<PawnColour> rowArray = new ArrayList<>();
+	public ArrayList<Pawn> createRowArray(int colIndex) {
+		ArrayList<Pawn> rowArray = new ArrayList<>();
 		PawnColour currentPawnColour = PawnColour.BLACK;
 		boolean evenColIndex = false;
 		boolean evenRowIndex = false;
@@ -50,42 +59,47 @@ public class DraughtsGameImpl extends DraughtsGame {
 				if (rowIndex > (MAX_ROWS / 2) - 1) {
 					currentPawnColour = PawnColour.WHITE;
 				}
-				rowArray.add(currentPawnColour);
-				if(currentPawnColour.equals(PawnColour.WHITE)){
-					this.whitePawnNumber++;
-				}else{
-					this.blackPawnNumber++;
-				}
-				System.out.println("" + evenRowIndex + evenColIndex + colIndex + rowIndex + currentPawnColour + "");
+				rowArray.add(new Pawn(currentPawnColour));
+				int count = this.pawnNumbersByColor.containsKey(currentPawnColour)
+						? this.pawnNumbersByColor.get(currentPawnColour) : 0;
+				this.pawnNumbersByColor.put(currentPawnColour, count + 1);
+				// System.out.println("" + evenRowIndex + evenColIndex +
+				// colIndex + rowIndex + currentPawnColour + "");
 			} else {
 				rowArray.add(null);
 			}
 		}
 		return rowArray;
 	}
-	
-	
 
+	/**
+	 * check if the game is playable and the validity of the positions before
+	 * moving the pawn
+	 *
+	 */
 	@Override
 	public boolean play(int startColIndex, int startRowIndex, int endColIndex, int endRowIndex) {
 		try {
-			Pawn pawn = (Pawn)this.getCell(startColIndex,startRowIndex);
-			Object endCell = this.getCell(endColIndex, endRowIndex);
-			PawnStatus status = pawn.getStatus();
-			PawnColour color = pawn.getColour();
-			return movePawn(startColIndex,startRowIndex,status,color,endColIndex,endRowIndex,endCell);
-			
-		}catch(IndexOutOfBoundsException e){
-			System.out.println("one of the positon is out of Board : "+e.getMessage());
-			return false;
-		}
-		catch (NullPointerException e) {
-			System.out.println("start Square is empty, you couldn´t move something empty : "+e.getMessage()); 
-			return false;
+			if (getWinner() == null) {
+				Pawn startCell = (Pawn) this.getCell(startColIndex, startRowIndex);
+				Pawn endCell = this.getCell(endColIndex, endRowIndex);
+				// check if pawn start object not null by accessing to one of
+				// his attribute
+				PawnStatus status = startCell.getStatus();
+				return movePawn(startColIndex, startRowIndex, endColIndex, endRowIndex, startCell, endCell);
+			} else {
+				return false;
+			}
+		} catch (IndexOutOfBoundsException e) {
+			throw new GameException("one of the positon is out of Board : " + e.getMessage());
+		} catch (NullPointerException e) {
+			throw new GameException("start Square is empty, you can´t move something empty : " + e.getMessage());
 		}
 	}
 
 	/**
+	 * TODO : optimize Queen detection by changing pawn direction movement
+	 * mecanics
 	 * 
 	 * @param startColIndex
 	 * @param startRowIndex
@@ -96,74 +110,147 @@ public class DraughtsGameImpl extends DraughtsGame {
 	 * @param endCell
 	 * @return
 	 */
-	private boolean movePawn(int startColIndex, int startRowIndex, PawnStatus status, PawnColour color, int endColIndex,
-			int endRowIndex, Object endCell) {	
-		return true;
+	private boolean movePawn(int startColIndex, int startRowIndex, int endColIndex, int endRowIndex, Pawn startCell,
+			Pawn endCell) {
+		int colMovement = endColIndex - startColIndex;
+		int rowMovement = endRowIndex - startRowIndex;
+		int colMovementSign = Integer.signum(colMovement);
+		int rowMovementSign = Integer.signum(rowMovement);
+
+		// movement is in diagonal and in the right direction
+		if (Math.abs(rowMovement) == Math.abs(colMovement)) {
+				// pawn try to move on a non adjacent cell
+				if ((startCell.status == PawnStatus.PAWN) && ((rowMovement != Pawn.MAX_PAWN_MOVEMENT * rowMovementSign) || (startCell.getMovementDirection() != rowMovementSign))) {
+					return false;
+				}
+
+				if (pawnEaten(startColIndex, startRowIndex, endColIndex, endRowIndex, colMovement, rowMovementSign,
+						colMovementSign, startCell, endCell)) {
+					setBoardSquare(endColIndex, endRowIndex, null);
+					endColIndex = endColIndex + colMovementSign;
+					endRowIndex = endRowIndex + rowMovementSign;
+				}
+
+				// pawn reach the board limit
+				if (endRowIndex == MAX_ROWS || endRowIndex == 0) {
+					startCell.becomeQueen();
+				}
+				setBoardSquare(endColIndex, endRowIndex, startCell);
+				setBoardSquare(startColIndex, startRowIndex, null);
+				return true;
+			}
+		return false;
+
 	}
 
-	@Override
-	public PawnColour getWinner(int numberPawn) {
-		if(this.blackPawnNumber == 0){
-			return PawnColour.WHITE;
-		} else if(this.whitePawnNumber == 0){
-			return PawnColour.BLACK;
-		} else{
-			return null;
+	/*
+	 * TODO : toStrng function for position ?
+	 * 
+	 */
+	private boolean pawnEaten(int startColIndex, int startRowIndex, int endColIndex, int endRowIndex, int colMovement,
+			int rowMovementSign, int colMovementSign, Pawn startCell, Pawn endCell) {
+		boolean hasEaten = false;
+		if (endCell != null) {
+			PawnColour endCellColour = endCell.getColour();
+			if (startCell.getColour() == endCellColour) {
+				throw new GameException("starting pawn and ending pawns have the same color");
+			} else {
+				// find if there are pawns between and behind (in the same
+				// diagonal)
+				for (int index = 1; index <= colMovement + 1; index++) {
+					int pawnColIndex = startColIndex + index * colMovementSign;
+					int pawnRowIndex = startRowIndex + index * rowMovementSign;
+					if (pawnColIndex != endColIndex && pawnRowIndex != endRowIndex) {
+						Pawn pawn = getCell(pawnColIndex, pawnRowIndex);
+						if (pawn != null) {
+							throw new GameException(
+									"There are pawns between : at position " + pawnColIndex + ":" + pawnRowIndex);
+						}
+					}
+				}
+				updateColorNumber(endCellColour, -1);
+				hasEaten = true;
+			}
 		}
+		return hasEaten;
 	}
-	
+
+	public void updateColorNumber(PawnColour colour, int number) {
+		int count = pawnNumbersByColor.containsKey(colour) ? pawnNumbersByColor.get(colour) : 0;
+		pawnNumbersByColor.put(colour, count + number);
+	}
+
+	/**
+	 * return the winner color or null if game is still not win
+	 *
+	 */
+	@Override
+	public PawnColour getWinner() {
+		for (Map.Entry<PawnColour, Integer> entry : pawnNumbersByColor.entrySet()) {
+			if (entry.getValue() == MIN_PAWNS) {
+				return entry.getKey();
+			}
+		}
+		return null;
+	}
+
 	/**
 	 * get cell content : null or pawn
+	 * 
 	 * @return
 	 */
 	@Override
-	public Object getCell(int colIndex,int rowIndex){
-		try{ 
+	public Pawn getCell(int colIndex, int rowIndex) {
+		try {
 			return this.board.get(colIndex).get(rowIndex);
-		}catch(IndexOutOfBoundsException e){
-			System.out.println("one of the positon is out of Board : "+e.getMessage());
-			return false;
+		} catch (IndexOutOfBoundsException e) {
+			throw new GameException("one of the positon is out of Board : " + e.getMessage());
 		}
 	}
-	
+
 	/**
-	 * number of black pawn on the board
-	 * @return
+	 * set a pawn on the board
+	 * 
+	 * @param colIndex
+	 * @param rowIndex
+	 * @param pawn
+	 * @throws Exception
 	 */
-	public int getBlackPawnNumber(){
-		return this.blackPawnNumber;
+	public void setBoardSquare(int colIndex, int rowIndex, Pawn pawn) {
+		try {
+			this.board.get(colIndex).set(rowIndex, pawn);
+		} catch (IndexOutOfBoundsException e) {
+			throw new GameException("one of the positon is out of Board : " + e.getMessage());
+		}
 	}
-	
-	/**
-	 * Number of white pawn on the board
-	 * @return
-	 */
-	public int getWhitePawnNumber(){
-		return this.whitePawnNumber;
-	}
-	
 
 	/**
 	 * get number of pawn on the board
+	 * 
+	 * TODO: change to get all number by color from hashmap
 	 * 
 	 * @return
 	 */
 	public int getBoardPawnNumber(PawnColour color) {
 		int nbPawn = 0;
-		for (ArrayList<PawnColour> arrayList : board) {
-			for (Object pawnColor : arrayList) {
-				if (color == null) {
-					if (pawnColor != null) {
+		boolean noColor = false;
+		if (color == null) {
+			noColor = true;
+		}
+		for (ArrayList<Pawn> arrayList : board) {
+			for (Pawn pawn : arrayList) {
+				if (pawn != null) {
+					if (noColor) {
 						nbPawn++;
-					}
-				} else {
-					if (pawnColor == color) {
-						nbPawn++;
+					} else {
+						if (pawn.getColour() == color) {
+							nbPawn++;
+						}
 					}
 				}
 			}
 		}
 		return nbPawn;
 	}
-	
+
 }
