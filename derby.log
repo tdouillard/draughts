@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Tue Feb 28 19:23:19 CET 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.0 - (1344872): instance a816c00e-015a-85f6-5a65-000017d90e60 
+on database directory /home/douille/Documents/ISEN/JEE/draughts/target/gfembed8308964183760784976tmp/lib/databases/embedded_default  with class loader java.net.URLClassLoader@781aff8b 
+Loaded from file:/home/douille/.m2/repository/org/glassfish/main/extras/glassfish-embedded-web/4.0/glassfish-embedded-web-4.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_121-8u121-b13-0ubuntu1.16.10.2-b13
+user.dir=/home/douille/Documents/ISEN/JEE/draughts
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
