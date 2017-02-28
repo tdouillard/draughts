@@ -23,7 +23,7 @@
 		<div class="container">
 			<h2 class="ui dividing header">Draughts</h2>
 			<div class="introduction">
-				<p>Simple draughts app that makes us use of JEE servlets</p>
+				<p>Simple draughts app that makes us use JEE servlets</p>
 			</div>
 			<c:if test="${game.winner != null}">
 				<div id="winner"
@@ -45,8 +45,10 @@
 			</c:forEach>
 		</div>
 
-
 		<a href="?reset" class="ui red button" id="reset">Reset game</a>
+		
+		<p>${oldColumnPosition},
+			${oldRowPosition}</p>
 	</div>
 
 
