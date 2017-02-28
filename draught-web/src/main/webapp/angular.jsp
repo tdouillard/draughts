@@ -47,24 +47,6 @@
 
 		</div>
 	</div>
-
-	<div class="main container">
-		<div id="board" class="ui ten column padded grid">
-			<a ng-repeat="col in game.columns" ng-click="play(col)"
-				class="blue column">
-				<div ng-repeat="cell in col.cells track by $index"
-					ng-class="{massive:true, circular:true, ui:true, icon:true, black:cell=='BLACK', yellow:cell=='WHITE',  button:true}"></div>
-
-			</a>
-		</div>
-		<a ng-click="resetGame()" class="ui red button" id="reset">Reset
-			game</a>
-	</div>
-
-
-
-
-
 	<script src="${pageContext.request.contextPath}/scripts/angular.js"></script>
 	<script src="${pageContext.request.contextPath}/scripts/main.js"></script>
 
